@@ -1,7 +1,7 @@
 <h2>To-Do List</h2>
 <div class="todo-list">
   {{#each model as |todo|}}
-    <div class="todo">
+    <div class="todo {{if todo.done 'done'}}">
       <p class="text">{{todo.text}}</p>
       <small class="status">({{if todo.done 'Hecho' 'Por hacer'}})</small>
     </div>

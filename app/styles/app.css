@@ -2,11 +2,23 @@
   font-family: sans-serif;
 }
 
-.todo-list .todo .text, .todo-list .todo .status {
+.todo {
+  display: block;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: #fff3cd;
+  margin: 0.5em 0;
+}
+
+.todo.done {
+  background-color: #d4edda;
+}
+
+.todo .text, .todo .status {
   display: inline-block;
 }
 
-.todo-list .todo .status {
+.todo .status {
   font-size: 0.7em;
 }
 

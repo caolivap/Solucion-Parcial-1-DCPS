@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import { get, set } from '@ember/object';
 
 export default Controller.extend({
   invalidLength: false,
@@ -23,5 +24,10 @@ export default Controller.extend({
       });
       this.set('newTodoText', '');
     },
-  }
+
+    toggleDone(todo) {
+      const done = get(todo, 'done');
+      set(todo, 'done', !done);
+    },
+  },
 });

@@ -1,0 +1,11 @@
+* {
+  font-family: sans-serif;
+}
+
+.todo-list .todo .text, .todo-list .todo .status {
+  display: inline-block;
+}
+
+.todo-list .todo .status {
+  font-size: 0.7em;
+}

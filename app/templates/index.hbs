@@ -1,0 +1,10 @@
+<div class="todo-list">
+  {{#each model as |todo|}}
+    <div class="todo">
+      <p class="text">{{todo.text}}</p>
+      <small class="status">({{if todo.done 'Hecho' 'Por hacer'}})</small>
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}

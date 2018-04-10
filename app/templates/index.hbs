@@ -1,3 +1,4 @@
+<h2>To-Do List</h2>
 <div class="todo-list">
   {{#each model as |todo|}}
     <div class="todo">
@@ -5,6 +6,16 @@
       <small class="status">({{if todo.done 'Hecho' 'Por hacer'}})</small>
     </div>
   {{/each}}
+</div>
+
+<div class="new-todo">
+  {{#if invalidLength}}
+    <div class="error">
+      La longitud del texto debe estar entre 20 y 100 caracteres
+    </div>
+  {{/if}}
+  {{input type="text" value=newTodoText placeholder="Ingrese acá el nuevo todo" class=(if invalidLength 'error')}}
+  <button type="button" {{action 'addTodo' argument}}>Agregar To-Do</button>
 </div>
 
 {{outlet}}

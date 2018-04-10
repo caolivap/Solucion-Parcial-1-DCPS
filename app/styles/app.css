@@ -9,3 +9,14 @@
 .todo-list .todo .status {
   font-size: 0.7em;
 }
+
+.error {
+  color: red;
+  font-size: 0.7em;
+}
+
+input.error {
+  border-color: red;
+  color: inherit;
+  font-size: inherit;
+}
